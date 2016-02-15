@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度地图插件</title>
+<script src="jquery.min.js"></script>
+<script src="lockBaiduMap.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=570E1e7563f6e47308e7928f68f9b6d3"></script>
+<style>
+html {font-size:16px;}
+</style>
+</head>
+
+<body>
+
+<div  style="clear:both; float:left;">
+上海黄浦区人民大道120号：
+<div id="map">
+
+</div>
+<br/>
+合肥芜湖路100号：
+<div id="map1">
+
+</div>
+<br/>
+北京天安门广场：
+<div id="map2">
+
+</div>
+<br/>
+</div>
+<div id="mapdynamic" style="width:600px;height:450px; float:right;"></div>
+<script>
+$(function () {
+	
+	$('#map').lockBaiduMap();
+	
+    $('#map1').lockBaiduMap({
+    	city : '合肥',
+    	address : '芜湖路100号'
+    });
+    
+    $('#map2').lockBaiduMap({
+    	city : '北京',
+    	address : '天安门广场'
+    });
+});
+
+
+
+</script>
+</body>
+</html>
